@@ -1,6 +1,12 @@
-# LEGAL AI - Legal Document Retrieval & Virtual Legal Assistant
+# NyayaSathi – AI-Powered Indian Legal Assistant
 
-AI-powered legal assistant for Indian law using RAG (Retrieval-Augmented Generation). Search across IPC, BNS 2023, Constitution, CrPC, 24,000+ legal Q&A pairs, and 146,000+ court judgments.
+NyayaSathi is an AI-powered legal assistance platform designed to make Indian legal information more accessible and understandable. The application uses Retrieval-Augmented Generation (RAG) to retrieve relevant information from Indian legal documents and generate context-aware responses using Google's Gemini AI.
+
+The system helps users understand legal rights, laws, procedures, and possible next steps in simple language.
+
+> **NyayaSathi means "Companion for Justice" — an AI assistant designed to make legal information more accessible, especially for people who may not have easy access to legal resources or professional guidance.**
+
+---
 
 ![Dashboard](charts/00_dashboard.png)
 
