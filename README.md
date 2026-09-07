@@ -8,14 +8,7 @@ The system helps users understand legal rights, laws, procedures, and possible n
 
 ---
 
-![Dashboard](charts/00_dashboard.png)
 
-## Application Results
-
-### Legal Search — High Confidence Result
-
-![Legal Search](charts/07_legal_search_light.png)
-![Legal Search Result](charts/08_legal_search_result.png)
 
 ### Personal Legal Assistant
 
