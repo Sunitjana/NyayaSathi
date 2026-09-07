@@ -207,34 +207,119 @@ python3 generate_dashboard.py
 ## Project Structure
 
 ```
-├── legal-rag/
-│   ├── api/main.py              # FastAPI backend (REST + SSE streaming + sessions)
-│   ├── ingest/
-│   │   ├── csv_loader.py         # Load + chunk CSV Q&A dataset
-│   │   ├── pdf_loader.py         # Extract + chunk PDFs (PyMuPDF)
-│   │   ├── jsonl_loader.py       # Load + chunk JSONL datasets
-│   │   └── embedder.py           # Embed chunks + store in pgvector
-│   ├── rag/
-│   │   ├── retriever.py          # Semantic search (pgvector) + reranker
-│   │   ├── generator.py          # Gemini answer generation with citations
-│   │   └── pipeline.py           # Full RAG pipeline
+NyayaSathi/
+│
+├── .vscode/                         # VS Code configuration
+│
+├── charts/                          # Generated evaluation charts
+│   ├── 00_dashboard.png
+│   ├── 01_dataset_distribution.png
+│   ├── 02_latency_breakdown.png
+│   ├── 03_top_sources.png
+│   ├── 04_evaluation_dashboard.png
+│   ├── 05_confusion_matrix.png
+│   ├── 06_precision_recall_f1.png
+│   ├── 07_legal_search_light.png
+│   ├── 08_legal_search_result.png
+│   └── 09_legal_assistant.png
+│
+├── data/                            # Raw legal datasets
+│   ├── pdfs/
+│   │   ├── Constitution_of_India.pdf
+│   │   ├── IPC.pdf
+│   │   ├── BNS_2023.pdf
+│   │   └── other_law_documents.pdf
+│   │
+│   ├── csv/
+│   │   └── indian_law_dataset.csv
+│   │
+│   └── jsonl/
+│       └── court_judgments.jsonl
+│
+│
+├── frontend/                        # NEXT.JS FRONTEND
+│   │
+│   ├── .next/                       # Auto-generated build files
+│   ├── node_modules/                # NPM packages
+│   ├── public/                      # Static assets
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── app/
+│   │   │   ├── favicon.ico
+│   │   │   ├── globals.css          # Global styling
+│   │   │   ├── layout.tsx           # Root layout
+│   │   │   └── page.tsx             # Main application UI
+│   │   │
+│   │   ├── components/
+│   │   │   ├── Scene3D.tsx          # Three.js background
+│   │   │   ├── ConfidenceBadge.tsx  # Confidence indicator
+│   │   │   ├── SourceChips.tsx      # Legal sources display
+│   │   │   └── TypingIndicator.tsx  # AI loading animation
+│   │   │
+│   │   └── lib/
+│   │       └── api.ts               # Backend API + SSE client
+│   │
+│   ├── .gitignore
+│   ├── AGENTS.md
+│   ├── CLAUDE.md
+│   ├── eslint.config.mjs
+│   ├── next-env.d.ts
+│   ├── next.config.ts
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.mjs
+│   ├── README.md
+│   └── tsconfig.json
+│
+│
+├── legal-rag/                       # PYTHON AI BACKEND
+│   │
+│   ├── api/
+│   │   ├── __init__.py
+│   │   └── main.py                  # FastAPI REST + SSE API
+│   │
 │   ├── assistant/
-│   │   └── legal_assistant.py    # Personal legal assistant mode
-│   ├── config.py
-│   └── requirements.txt
-├── frontend/
-│   ├── src/app/page.tsx          # Main UI (search + assistant modes)
-│   ├── src/components/
-│   │   ├── Scene3D.tsx           # Three.js 3D background
-│   │   ├── ConfidenceBadge.tsx
-│   │   ├── SourceChips.tsx
-│   │   └── TypingIndicator.tsx
-│   └── src/lib/api.ts            # API client + SSE streaming
-├── charts/                       # Evaluation dashboards and metrics
-├── evaluate.py                   # Evaluation pipeline
-├── generate_dashboard.py         # Performance dashboard generator
-├── start.sh                      # Start both servers
-└── README.md
+│   │   ├── __init__.py
+│   │   └── legal_assistant.py       # Personal legal assistant logic
+│   │
+│   ├── ingest/
+│   │   ├── csv_loader.py            # Load CSV datasets
+│   │   ├── pdf_loader.py            # Extract PDF text
+│   │   ├── jsonl_loader.py          # Load court judgments
+│   │   ├── embedder.py              # Generate embeddings
+│   │   └── ingest_new.py            # New data ingestion
+│   │
+│   ├── rag/
+│   │   ├── __init__.py
+│   │   ├── retriever.py             # pgvector semantic retrieval
+│   │   ├── generator.py             # Gemini answer generation
+│   │   └── pipeline.py              # Complete RAG pipeline
+│   │
+│   ├── venv/                        # Python virtual environment
+│   │   ├── Include/
+│   │   ├── Lib/
+│   │   └── Scripts/
+│   │
+│   ├── __pycache__/
+│   │
+│   ├── .env                         # SECRET ENVIRONMENT VARIABLES
+│   ├── .env.example                 # Environment variable template
+│   ├── .gitignore
+│   ├── config.py                    # Application configuration
+│   ├── requirements.txt             # Python dependencies
+│   ├── setup_database.py            # Database setup
+│   ├── evaluate.py                  # RAG evaluation
+│   └── generate_dashboard.py        # Generate charts
+│
+│
+├── evaluate.py                      # Optional root evaluation script
+├── generate_dashboard.py            # Optional root dashboard script
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+└── start.sh
 ```
 
 ## Disclaimer
