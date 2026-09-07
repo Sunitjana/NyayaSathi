@@ -313,8 +313,6 @@ NyayaSathi/
 │   └── generate_dashboard.py        # Generate charts
 │
 │
-├── evaluate.py                      # Optional root evaluation script
-├── generate_dashboard.py            # Optional root dashboard script
 │
 ├── .gitignore
 ├── LICENSE
