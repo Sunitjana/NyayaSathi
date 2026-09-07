@@ -9,11 +9,6 @@ The system helps users understand legal rights, laws, procedures, and possible n
 ---
 
 
-
-### Personal Legal Assistant
-
-![Legal Assistant](charts/09_legal_assistant.png)
-
 ## Architecture
 
 ```
