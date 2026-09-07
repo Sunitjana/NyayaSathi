@@ -39,20 +39,23 @@ The system helps users understand legal rights, laws, procedures, and possible n
 ## AI/ML Technologies Used
 
 | Category | Technology | Purpose |
-|----------|-----------|---------|
-| **LLM** | Google Gemini 2.5 Flash | Answer generation, query expansion |
-| **Embeddings** | sentence-transformers (all-MiniLM-L6-v2) | 384-dim text embeddings (BERT-based) |
-| **Reranker** | cross-encoder/ms-marco-MiniLM-L-6-v2 | Cross-encoder learning-to-rank model |
-| **Deep Learning** | PyTorch, Transformers | Model inference for embeddings and reranking |
-| **Vector Database** | Neon PostgreSQL + pgvector | Semantic similarity search over 164K vectors |
-| **NLP** | tiktoken | Token counting and text chunking |
-| **PDF Parsing** | PyMuPDF (fitz) | Extract text from legal PDF documents |
-| **Data Processing** | pandas, NumPy | Dataset loading and processing |
-| **Frontend** | Next.js 15, React 19 | Web application framework |
-| **3D Graphics** | Three.js, React Three Fiber, Drei | Interactive 3D animated background |
-| **Styling** | Tailwind CSS, Framer Motion | UI styling and animations |
-| **Backend** | FastAPI, Uvicorn | REST API + SSE streaming server |
-| **Streaming** | Server-Sent Events (SSE) | Real-time token-by-token response streaming |
+|----------|------------|---------|
+| **LLM** | Google Gemini 3.6 Flash | Generates legal responses using retrieved context |
+| **Embeddings** | sentence-transformers (all-MiniLM-L6-v2) | Converts legal documents and user queries into 384-dimensional vector embeddings |
+| **Reranker** | cross-encoder/ms-marco-MiniLM-L-6-v2 | Reranks retrieved documents to improve search relevance |
+| **Deep Learning** | PyTorch, Transformers | Supports embedding and reranking model inference |
+| **RAG Architecture** | Retrieval-Augmented Generation | Retrieves relevant legal information before generating responses |
+| **Vector Database** | Neon PostgreSQL + pgvector | Stores and performs semantic search on legal document embeddings |
+| **Semantic Search** | Cosine Similarity Search | Finds legally relevant documents based on meaning rather than keywords |
+| **NLP** | tiktoken | Token counting and document chunking |
+| **PDF Processing** | PyMuPDF (fitz) | Extracts text from Indian legal documents and PDFs |
+| **Data Processing** | Pandas, NumPy | Dataset cleaning, preprocessing, and analysis |
+| **Backend** | FastAPI, Uvicorn | Provides REST APIs and backend services |
+| **Streaming** | Server-Sent Events (SSE) | Streams AI-generated responses in real time |
+| **Frontend** | Next.js, React | Builds the interactive web application |
+| **3D Graphics** | Three.js, React Three Fiber, Drei | Creates the interactive animated background |
+| **Styling & Animation** | Tailwind CSS, Framer Motion | Responsive UI design and animations |
+| **Cloud Database** | Neon | Serverless PostgreSQL cloud database hosting |
 
 ## Techniques Used
 
