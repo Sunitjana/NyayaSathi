@@ -1,0 +1,9 @@
+google-genai
+psycopg2-binary
+sentence-transformers
+PyMuPDF
+pandas
+tiktoken
+python-dotenv
+numpy<2
+rank-bm25

@@ -1,0 +1,43 @@
+# Environment & secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Old databases
+chroma_db/
+faiss_index/
+
+# Node
+node_modules/
+.next/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (too large for git)
+data/raw/case_law/
+data/raw/qa_datasets/
+data/raw/pdfs/*.pdf
+data/raw/indian_law_dataset.csv
+
+# IDE
+.vscode/
+.idea/
+
+# Downloads
+download_all_data.py
+download_all_data_v2.py
+download_dataset.py
+
+.env
+venv/
+__pycache__/
+*.pyc

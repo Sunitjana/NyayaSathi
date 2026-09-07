@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050510;
+  --foreground: #e4e4f0;
+  --card: #0d0d1a;
+  --card-border: rgba(99, 102, 241, 0.15);
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.3);
+  --muted: #6b7280;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+[data-theme="light"] {
+  --background: #f8f9fc;
+  --foreground: #1a1a2e;
+  --card: #ffffff;
+  --card-border: rgba(99, 102, 241, 0.12);
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --muted: #6b7280;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(99, 102, 241, 0.12);
+}
+
+[data-theme="light"] .glow-text {
+  text-shadow: none;
+  color: #4f46e5;
+}
+
+[data-theme="light"] .markdown-body,
+[data-theme="light"] .markdown-body p,
+[data-theme="light"] .markdown-body li {
+  color: #374151;
+}
+
+[data-theme="light"] .markdown-body strong {
+  color: #4f46e5;
+}
+
+[data-theme="light"] select option {
+  background: #ffffff;
+  color: #1a1a2e;
+}
+
+[data-theme="light"] .text-gray-300,
+[data-theme="light"] .text-gray-400,
+[data-theme="light"] .text-gray-500 {
+  color: #4b5563 !important;
+}
+
+[data-theme="light"] .text-gray-600 {
+  color: #6b7280 !important;
+}
+
+[data-theme="light"] .text-indigo-100,
+[data-theme="light"] .text-indigo-300 {
+  color: #4338ca !important;
+}
+
+[data-theme="light"] .text-amber-300\/80 {
+  color: #92400e !important;
+}
+
+[data-theme="light"] .text-purple-300 {
+  color: #7c3aed !important;
+}
+
+[data-theme="light"] .bg-indigo-500\/20 {
+  background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+[data-theme="light"] .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .bg-amber-500\/10 {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+}
+
+[data-theme="light"] .placeholder-gray-600::placeholder {
+  color: #9ca3af !important;
+}
+
+[data-theme="light"] .text-gray-200 {
+  color: #1f2937 !important;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3 {
+  color: #1a1a2e;
+}
+
+[data-theme="light"] .border-indigo-500\/10,
+[data-theme="light"] .border-indigo-500\/20,
+[data-theme="light"] .border-indigo-500\/30 {
+  border-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+.glass {
+  background: rgba(13, 13, 26, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+}
+
+.glass-hover:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.glow-text {
+  text-shadow: 0 0 40px var(--accent-glow);
+}
+
+.answer-stream .markdown-body h1,
+.answer-stream .markdown-body h2,
+.answer-stream .markdown-body h3 {
+  color: var(--foreground);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.answer-stream .markdown-body p {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.answer-stream .markdown-body ul,
+.answer-stream .markdown-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.answer-stream .markdown-body li {
+  margin-bottom: 0.25rem;
+}
+
+.answer-stream .markdown-body strong {
+  color: #a5b4fc;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes typing {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.typing-dot {
+  animation: typing 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 3px;
+}
